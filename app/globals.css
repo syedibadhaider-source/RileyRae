@@ -288,6 +288,35 @@
   animation-play-state: paused;
 }
 
+/* Hero CTAs — compact on mobile; !important overrides .btn-luxury / .text-link */
+@media (max-width: 639px) {
+  .hero-cta .btn-luxury {
+    min-height: 27px !important;
+    padding: 8px 14px !important;
+    font-size: 9.5px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.1em !important;
+    gap: 5px !important;
+  }
+
+  .hero-cta .btn-luxury svg {
+    width: 9.5px !important;
+    height: 9.5px !important;
+  }
+
+  .hero-cta .text-link {
+    font-size: 9.5px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.1em !important;
+    gap: 4px !important;
+  }
+
+  .hero-cta .text-link svg {
+    width: 9.5px !important;
+    height: 9.5px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
