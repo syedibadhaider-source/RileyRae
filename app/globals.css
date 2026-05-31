@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #0a0a0a;
+  --color-charcoal: #141414;
+  --color-charcoal-light: #1e1e1e;
+  --color-ivory: #f5f0eb;
+  --color-ivory-muted: #b8b0a8;
+  --color-rose: #d6336d;
+  --color-rose-dark: #b0255a;
+  --color-rose-light: #ec89ac;
+  --color-rose-border: rgba(214, 51, 109, 0.4);
+  --color-champagne: #c4b08a;
+  --color-champagne-muted: #8a7d62;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-body: var(--font-manrope), "Manrope", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    @apply bg-black text-ivory font-body antialiased;
+    overflow-x: clip;
+    min-width: 320px;
+  }
+
+  main {
+    overflow-x: clip;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  body::before {
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    @apply bg-rose/30 text-ivory;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-eyebrow {
+    @apply font-body text-[10px] uppercase tracking-[0.2em] text-rose sm:text-xs sm:tracking-[0.25em];
+  }
+
+  .section-padding {
+    @apply py-14 md:py-24 lg:py-28;
+  }
+
+  .section-container {
+    @apply mx-auto w-full max-w-7xl min-w-0 px-5 sm:px-6 lg:px-10 xl:px-12;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-light leading-tight tracking-[0.06em] text-ivory sm:text-4xl sm:tracking-[0.08em] md:text-5xl lg:text-[3.25rem];
+  }
+
+  .section-split {
+    @apply grid min-w-0 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-14 xl:gap-20;
+  }
+
+  .section-split-content {
+    @apply min-w-0 lg:col-span-5;
+  }
+
+  .section-split-media {
+    @apply min-w-0 lg:col-span-6 lg:col-start-7;
+  }
+
+  .section-split-media-left {
+    @apply min-w-0 lg:col-span-6 lg:col-start-1;
+  }
+
+  .luxury-card {
+    @apply border border-rose/10 bg-black/20 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-rose/35 hover:shadow-[0_12px_40px_rgba(214,51,109,0.08)];
+  }
+
+  .media-frame {
+    @apply relative overflow-hidden border border-rose/15 bg-charcoal;
+  }
+
+  .section-glow {
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(214, 51, 109, 0.06), transparent 70%);
+  }
+
+  .ambient-photo {
+    @apply relative overflow-hidden border border-rose/10 grayscale;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .ambient-vignette {
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, rgba(10, 10, 10, 0.55) 100%),
+      linear-gradient(to bottom, rgba(10, 10, 10, 0.35), transparent 35%, transparent 65%, rgba(10, 10, 10, 0.45));
+  }
+
+  .ambient-vignette-charcoal {
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, rgba(20, 20, 20, 0.6) 100%),
+      linear-gradient(to bottom, rgba(20, 20, 20, 0.4), transparent 35%, transparent 65%, rgba(20, 20, 20, 0.5));
+  }
+
+  .ambient-vignette-soft {
+    background: linear-gradient(
+      to right,
+      rgba(10, 10, 10, 0.55) 0%,
+      transparent 28%,
+      transparent 72%,
+      rgba(10, 10, 10, 0.55) 100%
+    );
+  }
+
+  .ambient-vignette-soft-charcoal {
+    background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.55) 0%,
+      transparent 28%,
+      transparent 72%,
+      rgba(20, 20, 20, 0.55) 100%
+    );
+  }
+
+  .partner-logo {
+    @apply h-7 w-auto object-contain opacity-70 brightness-0 invert transition-opacity duration-300 hover:opacity-100 md:h-8;
+  }
+
+  .btn-luxury {
+    @apply inline-flex min-h-11 items-center gap-3 border border-rose/60 bg-transparent px-6 py-3 font-body text-xs uppercase tracking-[0.2em] text-ivory transition-all duration-500 hover:-translate-y-0.5 hover:border-rose hover:bg-rose/10 hover:tracking-[0.25em] sm:min-h-0 sm:px-8;
+  }
+
+  .btn-luxury-solid {
+    @apply inline-flex min-h-11 items-center justify-center bg-rose px-6 py-3 font-body text-xs uppercase tracking-[0.2em] text-black transition-all duration-500 hover:-translate-y-0.5 hover:bg-rose-dark hover:text-ivory hover:shadow-[0_8px_30px_rgba(214,51,109,0.25)] sm:min-h-0 sm:px-8;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-rose transition-all duration-300 hover:gap-3 hover:text-ivory;
+  }
+
+  .nav-link {
+    @apply relative font-body text-[11px] uppercase tracking-[0.2em] text-ivory-muted transition-colors duration-300 hover:text-ivory;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-rose transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    @apply w-full;
+  }
+
+  .nav-link-active {
+    @apply text-ivory;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom 20s ease-in-out infinite alternate;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-line-expand {
+  animation: line-expand 1.2s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes gallery-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-gallery-marquee {
+  animation: gallery-marquee 60s linear infinite;
+}
+
+.animate-gallery-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-hero-zoom,
+  .animate-gallery-marquee {
+    animation: none;
+  }
+
+  .animate-fade-in-up,
+  .animate-line-expand {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
