@@ -19,7 +19,7 @@ export function Newsletter() {
   return (
     <SectionShell
       tone="black"
-      className="!py-10 md:!py-14"
+      className="!pb-8 !pt-10 md:!pb-10 md:!pt-14"
       atmosphere={
         <AmbientPhotos
           images={ambientNewsletter}
@@ -55,8 +55,8 @@ export function Newsletter() {
           </form>
         </Reveal>
 
-        <Reveal direction="right" delay={120} className="section-split-media">
-          <div className="media-frame group relative aspect-[4/3] w-full overflow-hidden">
+        <Reveal direction="right" delay={120} className="section-split-media max-lg:order-last">
+          <div className="media-frame group relative aspect-[4/3] w-full overflow-hidden max-lg:mb-2">
             <Image
               src="/images/lounge-detail.jpg"
               alt="Luxury lounge detail with cocktail and candlelight"

@@ -112,39 +112,105 @@ export const services = [
 
 export const performancePackages = [
   {
+    id: "intimate-lounge",
     name: "Intimate Lounge Set",
-    description: "Soulful vocals and refined jazz arrangements for boutique hotels, lounges, and private salons.",
+    description:
+      "Soulful vocals and refined jazz arrangements for boutique hotels, lounges, and private salons.",
     includes: ["Solo or duo performance", "Curated song list", "60–90 minute set"],
   },
   {
+    id: "corporate-gala",
     name: "Corporate Gala Experience",
-    description: "Elevated live entertainment for awards ceremonies, brand launches, and executive gatherings.",
+    description:
+      "Elevated live entertainment for awards ceremonies, brand launches, and executive gatherings.",
     includes: ["Full band option", "Custom staging consultation", "Professional sound coordination"],
   },
   {
+    id: "private-celebration",
     name: "Luxury Private Celebration",
-    description: "Tailored performances for weddings, milestone events, and exclusive private parties.",
+    description:
+      "Tailored performances for weddings, milestone events, and exclusive private parties.",
     includes: ["Personalized repertoire", "Event flow planning", "Premium presentation"],
   },
   {
+    id: "residency",
     name: "Residency & Cultural Events",
-    description: "Extended engagements and curated music experiences for resorts, festivals, and cultural programs.",
+    description:
+      "Extended engagements and curated music experiences for resorts, festivals, and cultural programs.",
     includes: ["Multi-date bookings", "Experience design", "Artist & venue liaison"],
   },
-];
+] as const;
 
 export const liveAudioTracks = [
   {
     id: "fmu",
     title: "FMU",
     subtitle: "Original — Live Studio Session",
-    spotifyId: "6RKHzedIWjjpsoMRawEw5e",
+    artist: "Riley Rae",
+    platform: "spotify" as const,
+    spotifyId: "22IRA4w4i1nseXneC375Jg",
+    artworkUrl:
+      "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e983edd6dcba5680d2b0352c",
+    listenUrl: "https://open.spotify.com/track/22IRA4w4i1nseXneC375Jg",
   },
   {
     id: "changed",
     title: "Changed My Miind",
     subtitle: "Live Performance Recording",
+    artist: "Riley Rae",
+    platform: "spotify" as const,
+    spotifyId: "6RKHzedIWjjpsoMRawEw5e",
+    artworkUrl:
+      "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0264af237ecf9d7abdc89f2027",
+    listenUrl: "https://open.spotify.com/track/6RKHzedIWjjpsoMRawEw5e",
+  },
+  {
+    id: "in-the-mood",
+    title: "In The Mood",
+    subtitle: "Studio Session",
+    artist: "Riley Rae",
+    platform: "spotify" as const,
+    spotifyId: "1MvjiMQDmqCESQaNLLKslY",
+    artworkUrl:
+      "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0261677ac0623af9c3192486ef",
+    listenUrl: "https://open.spotify.com/track/1MvjiMQDmqCESQaNLLKslY",
+  },
+  {
+    id: "holding-out",
+    title: "Holding Out",
+    subtitle: "Live Recording",
+    artist: "Riley Rae",
+    platform: "spotify" as const,
     spotifyId: "1CIdvZU9FOoPG8irqGfgtA",
+    artworkUrl:
+      "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d4d0fc23b818823b3f0d0ba9",
+    listenUrl: "https://open.spotify.com/track/1CIdvZU9FOoPG8irqGfgtA",
+  },
+  {
+    id: "walk-with-me",
+    title: "Walk with Me",
+    subtitle: "feat. Riley Rae",
+    artist: "Lawrence Goin' Up",
+    platform: "apple" as const,
+    artworkUrl:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f0/9c/2e/f09c2e8a-797b-239d-2f73-6aca3eecc5d6/artwork.jpg/300x300bb.jpg",
+    listenUrl:
+      "https://music.apple.com/us/album/walk-with-me-feat-riley-rae/1655444833?i=1655444834",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/fe/44/8e/fe448e6c-6db6-8de2-1956-3b75779c92ff/mzaf_10727781444823714091.plus.aac.p.m4a",
+  },
+  {
+    id: "getaway-driver",
+    title: "Getaway Driver",
+    subtitle: "feat. Riley Rae",
+    artist: "Bird the Bricklayer",
+    platform: "apple" as const,
+    artworkUrl:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/35/3e/27/353e27d4-7a69-1a78-9a55-be5eef34d7ad/artwork.jpg/300x300bb.jpg",
+    listenUrl:
+      "https://music.apple.com/us/album/getaway-driver-feat-riley-rae/1529308125?i=1529308127",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/8c/df/bc/8cdfbc94-180c-862e-0ab2-43be409ee350/mzaf_16014047853160432753.plus.aac.p.m4a",
   },
 ];
 

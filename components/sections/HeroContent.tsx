@@ -53,11 +53,15 @@ export function HeroContent() {
       </p>
 
       <div
-        className={`mt-8 flex flex-col gap-5 sm:mt-10 sm:flex-row sm:items-center ${item()}`}
+        className={`mt-8 flex flex-row flex-nowrap items-center justify-center gap-2.5 sm:mt-10 sm:justify-start sm:gap-5 ${item()}`}
         style={{ transitionDelay: "700ms" }}
       >
-        <Button href="#booking">Book Riley Rae</Button>
-        <TextLink href="#shows">View Performances</TextLink>
+        <Button href="#booking" className="shrink-0 px-4 sm:px-8">
+          Book Riley Rae
+        </Button>
+        <TextLink href="#shows" className="shrink-0 whitespace-nowrap">
+          View Performances
+        </TextLink>
       </div>
     </div>
   );

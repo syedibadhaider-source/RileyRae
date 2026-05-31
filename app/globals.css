@@ -177,15 +177,50 @@
   .nav-link-active {
     @apply text-ivory;
   }
+
+  .package-accordion {
+    @apply relative overflow-hidden border border-rose/10 bg-charcoal-light/30 transition-[border-color,box-shadow,background] duration-500 ease-out;
+  }
+
+  .package-accordion-open {
+    @apply border-rose/35 bg-black/40;
+    box-shadow:
+      0 0 0 1px rgba(214, 51, 109, 0.08),
+      0 20px 50px rgba(0, 0, 0, 0.45),
+      0 0 60px rgba(214, 51, 109, 0.06);
+  }
+
+  .package-accordion-glow {
+    background: radial-gradient(
+      ellipse 80% 60% at 0% 50%,
+      rgba(214, 51, 109, 0.14),
+      transparent 70%
+    );
+  }
+
+  .package-accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .package-accordion-panel-open {
+    grid-template-rows: 1fr;
+  }
 }
 
-@keyframes hero-zoom {
+@keyframes hero-slide-zoom {
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
+}
+
+.animate-hero-slide-zoom {
+  animation: hero-slide-zoom var(--hero-zoom-duration, 5.5s) ease-out forwards;
+  transform-origin: center center;
 }
 
 @keyframes fade-in-up {
@@ -209,7 +244,8 @@
 }
 
 .animate-hero-zoom {
-  animation: hero-zoom 20s ease-in-out infinite alternate;
+  animation: hero-slide-zoom var(--hero-zoom-duration, 5.5s) ease-out forwards;
+  transform-origin: center center;
 }
 
 .animate-fade-in-up {
@@ -218,6 +254,20 @@
 
 .animate-line-expand {
   animation: line-expand 1.2s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes riley-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-riley-logo-spin {
+  animation: riley-logo-spin 28s linear infinite;
   transform-origin: center;
 }
 
@@ -244,7 +294,9 @@
   }
 
   .animate-hero-zoom,
-  .animate-gallery-marquee {
+  .animate-hero-slide-zoom,
+  .animate-gallery-marquee,
+  .animate-riley-logo-spin {
     animation: none;
   }
 

@@ -8,7 +8,6 @@ function DiamondOrnament({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <span className="h-px w-6 bg-rose/40 sm:w-8" />
-      <span className="inline-block h-1.5 w-1.5 rotate-45 border border-rose/60" />
       <span className="h-px w-6 bg-rose/40 sm:w-8" />
     </span>
   );

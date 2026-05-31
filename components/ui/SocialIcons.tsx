@@ -42,7 +42,11 @@ export function SocialIcons({
   return (
     <div
       className={`flex ${
-        isVertical ? "flex-col gap-5" : isHero ? "flex-row flex-wrap gap-4 sm:gap-5" : "flex-row flex-wrap gap-4 md:gap-5"
+        isVertical
+          ? "flex-col gap-5"
+          : isHero
+            ? "flex-row flex-nowrap gap-2 sm:gap-4 md:gap-5"
+            : "flex-row flex-wrap gap-4 md:gap-5"
       } ${className}`}
     >
       {socialLinks.map(({ label, href, icon }, index) => {
@@ -57,7 +61,7 @@ export function SocialIcons({
             style={isHero ? { animationDelay: `${index * 80}ms` } : undefined}
             className={
               isHero
-                ? "group relative flex h-12 w-12 items-center justify-center border border-rose/20 text-rose/80 transition-all duration-500 hover:-translate-y-1 hover:border-rose/60 hover:text-rose hover:shadow-[0_0_20px_rgba(214,51,109,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/50 motion-safe:animate-fade-in-up sm:h-14 sm:w-14"
+                ? "group relative flex h-9 w-9 shrink-0 items-center justify-center border border-rose/20 text-rose/80 transition-all duration-500 hover:-translate-y-1 hover:border-rose/60 hover:text-rose hover:shadow-[0_0_20px_rgba(214,51,109,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/50 motion-safe:animate-fade-in-up sm:h-12 sm:w-12 md:h-14 md:w-14"
                 : "text-rose/70 transition-colors duration-300 hover:text-rose focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             }
           >
@@ -67,7 +71,7 @@ export function SocialIcons({
             <Icon
               className={
                 isHero
-                  ? "relative h-6 w-6 transition-transform duration-500 group-hover:scale-110 sm:h-7 sm:w-7"
+                  ? "relative h-4 w-4 transition-transform duration-500 group-hover:scale-110 sm:h-6 sm:w-6 md:h-7 md:w-7"
                   : "h-4 w-4 md:h-[18px] md:w-[18px]"
               }
             />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { RileyRaeRoundLogo } from "@/components/ui/RileyRaeRoundLogo";
 
 interface SectionDividerProps {
   showMonogram?: boolean;
@@ -37,10 +38,8 @@ export function SectionDivider({ showMonogram = true }: SectionDividerProps) {
         style={{ transformOrigin: "center" }}
       />
       {showMonogram && (
-        <div className="relative z-10 flex h-12 w-12 items-center justify-center">
-          <div className="absolute inset-0 rotate-45 border border-rose/40" />
-          <div className="absolute inset-1 rotate-45 border border-champagne/30" />
-          <span className="font-display text-sm tracking-widest text-rose">RR</span>
+        <div className="relative z-10 flex items-center justify-center">
+          <RileyRaeRoundLogo />
         </div>
       )}
     </div>
