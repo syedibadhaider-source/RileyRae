@@ -21,7 +21,7 @@ export function HeroSlider() {
 
   return (
     <div
-      className="relative h-[50vh] overflow-hidden lg:h-full lg:min-h-screen"
+      className="relative h-[42svh] min-h-[240px] max-h-[420px] overflow-hidden sm:h-[45vh] lg:h-full lg:max-h-none lg:min-h-screen"
       style={{ ["--hero-zoom-duration" as string]: `${ZOOM_MS}ms` }}
     >
       {heroSlides.map((slide, index) => {

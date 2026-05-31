@@ -25,12 +25,12 @@ export function HeroContent() {
         <SocialIcons
           variant="hero"
           orientation="horizontal"
-          className="mb-8 w-full justify-center sm:mb-10 sm:w-auto sm:justify-start"
+          className="mb-5 w-full justify-center sm:mb-8 sm:w-auto sm:justify-start lg:mb-10"
         />
       </div>
 
       <div className={item()} style={{ transitionDelay: "220ms" }}>
-        <Eyebrow withOrnaments className="mb-8">
+        <Eyebrow withOrnaments className="mb-4 sm:mb-6 lg:mb-8">
           International Vocalist & Event Producer
         </Eyebrow>
       </div>
@@ -43,21 +43,21 @@ export function HeroContent() {
       </h1>
 
       <p
-        className={`mt-5 font-display text-xl font-light italic text-ivory sm:mt-6 sm:text-2xl md:text-3xl ${item()}`}
+        className={`mt-3 font-display text-xl font-light italic text-ivory sm:mt-5 sm:text-2xl md:mt-6 md:text-3xl ${item()}`}
         style={{ transitionDelay: "460ms" }}
       >
         {siteConfig.tagline}
       </p>
 
       <p
-        className={`mt-5 max-w-md font-body text-sm leading-relaxed text-ivory-muted sm:mt-6 md:text-base ${item()}`}
+        className={`mt-3 max-w-md font-body text-sm leading-relaxed text-ivory-muted sm:mt-5 md:mt-6 md:text-base ${item()}`}
         style={{ transitionDelay: "580ms" }}
       >
         {siteConfig.description}
       </p>
 
       <div
-        className={`hero-cta mt-8 flex flex-row flex-nowrap items-center justify-center gap-2 sm:mt-10 sm:justify-start sm:gap-5 ${item()}`}
+        className={`hero-cta mt-5 flex flex-row flex-nowrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-5 lg:mt-10 ${item()}`}
         style={{ transitionDelay: "700ms" }}
       >
         <Button href="#booking" className="shrink-0 sm:px-8">
